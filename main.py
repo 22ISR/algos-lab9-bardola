@@ -1,0 +1,65 @@
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("800x500")
+
+label = tk.Label(root, text="Калькулятор", font=("Arial", 18))
+label.pack(padx=20, pady=20)
+
+textbox = tk.Text(root, height=3, font=("Arial", 16))
+textbox.pack()
+buttonFrame = tk.Frame(root)
+
+buttonFrame.columnconfigure(0, weight=1)
+buttonFrame.columnconfigure(1, weight=1)
+buttonFrame.columnconfigure(2, weight=1)
+buttonFrame.columnconfigure(3, weight=1)
+
+btn0x0 = tk.Button(buttonFrame, text="AC", font=("Arial", 18))
+btn0x0.grid(row=0, column=0, sticky="we")
+btn0x1 = tk.Button(buttonFrame, text="()", font=("Arial", 18))
+btn0x1.grid(row=0, column=1, sticky="we")
+btn0x2 = tk.Button(buttonFrame, text="%", font=("Arial", 18))
+btn0x2.grid(row=0, column=2, sticky="we")
+btn0x3 = tk.Button(buttonFrame, text="/", font=("Arial", 18))
+btn0x3.grid(row=0, column=3, sticky="we")
+
+btn1x0 = tk.Button(buttonFrame, text="7", font=("Arial", 18))
+btn1x0.grid(row=1, column=0, sticky="we")
+btn1x1 = tk.Button(buttonFrame, text="8", font=("Arial", 18))
+btn1x1.grid(row=1, column=1, sticky="we")
+btn1x2 = tk.Button(buttonFrame, text="9", font=("Arial", 18))
+btn1x2.grid(row=1, column=2, sticky="we")
+btn1x3 = tk.Button(buttonFrame, text="*", font=("Arial", 18))
+btn1x3.grid(row=1, column=3, sticky="we")
+
+btn2x0 = tk.Button(buttonFrame, text="4", font=("Arial", 18))
+btn2x0.grid(row=2, column=0, sticky="we")
+btn2x1 = tk.Button(buttonFrame, text="5", font=("Arial", 18))
+btn2x1.grid(row=2, column=1, sticky="we")
+btn2x2 = tk.Button(buttonFrame, text="6", font=("Arial", 18))
+btn2x2.grid(row=2, column=2, sticky="we")
+btn2x3 = tk.Button(buttonFrame, text="-", font=("Arial", 18))
+btn2x3.grid(row=2, column=3, sticky="we")
+
+btn3x0 = tk.Button(buttonFrame, text="1", font=("Arial", 18))
+btn3x0.grid(row=3, column=0, sticky="we")
+btn3x1 = tk.Button(buttonFrame, text="2", font=("Arial", 18))
+btn3x1.grid(row=3, column=1, sticky="we")
+btn3x2 = tk.Button(buttonFrame, text="3", font=("Arial", 18))
+btn3x2.grid(row=3, column=2, sticky="we")
+btn3x3 = tk.Button(buttonFrame, text="+", font=("Arial", 18))
+btn3x3.grid(row=3, column=3, sticky="we")
+
+btn4x0 = tk.Button(buttonFrame, text="0", font=("Arial", 18))
+btn4x0.grid(row=4, column=0, sticky="we")
+btn4x1 = tk.Button(buttonFrame, text=".", font=("Arial", 18))
+btn4x1.grid(row=4, column=1, sticky="we")
+btn4x2 = tk.Button(buttonFrame, text="󰁮", font=("Arial", 18))
+btn4x2.grid(row=4, column=2, sticky="we")
+btn4x3 = tk.Button(buttonFrame, text="=", font=("Arial", 18))
+btn4x3.grid(row=4, column=3, sticky="we")
+
+buttonFrame.pack(fill="x")
+
+root.mainloop()
